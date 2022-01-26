@@ -2,14 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('NPM Build'){
+        stage('Docker Build'){
             steps {
-                sh '''
-                set +e
-                export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin/
-                npm install
-                npm start
-                '''
+                echo 'test docker'
+        
             }
         }
     }
